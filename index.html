@@ -539,6 +539,22 @@ body:not(.trang-coban) .cb-giua-nut, .luan-wrap.laso-mo .cb-giua-nut { display: 
 #kq p, #kq li, #kq dd, .td-hop p, .cs-hop p, .cb-pop p, .laso-nhac { text-align: justify; hyphens: auto; }
 #kq .cb-chuyen, #kq td, #kq th, #kq .disclaimer { text-align: initial; }
 #kq .disclaimer { text-align: center; }
+/* chữ thanh đầu và chân trang lớn hơn (người dùng 12/10/2026) – cỡ px cố định, không theo cỡ chữ gốc (điện thoại gốc chỉ 13px) */
+:root { --cao-dau: 58px; --cao-chan: 58px; }
+.thanh-dau .td-ten { font-size: 23px; }
+.nut-lui span, .nut-tiep span { font-size: 18px; }
+.thanh-dau .td-phai button { font-size: 17px; padding: 5px 14px; }
+.nut-lui i, .nut-tiep i { width: 36px; height: 36px; }
+.thanh-chan { font-size: 19px; line-height: 1.35; }
+@media (max-width: 760px) { :root { --cao-chan: 84px; } .thanh-chan { font-size: 15.5px; } }
+@media (max-width: 520px) {
+  :root { --cao-dau: 54px; }
+  .thanh-dau .td-ten { font-size: 18px; }
+  .nut-lui span, .nut-tiep span { font-size: 16px; }
+  .thanh-dau .td-phai button { font-size: 15px; padding: 4px 10px; }
+  .nut-lui i, .nut-tiep i { width: 32px; height: 32px; }
+}
+@media (max-width: 520px) { .nut-mucluc span { display: none; } .thanh-dau .td-phai { gap: 6px; } }
 
 /* Riêng bản artifact. Một giao diện sáng (người dùng chọn nền trắng) – đặt màu rõ ràng cho mọi chế độ của trình xem. */
 :root { color-scheme: light; --ok: #2e7d32; --loi: #a3271a; }
@@ -568,7 +584,7 @@ details.ds-la-so summary { cursor: pointer; color: var(--accent); font-weight: 6
 <div class="thanh-dau" id="thanhDau">
   <button type="button" class="nut-lui" id="nutLui" title="Quay lại phần Luận giải tử vi" aria-label="Quay lại phần Luận giải tử vi"><i></i><span>Luận giải tử vi</span></button>
   <span class="td-ten" id="tdTen">Luận giải tử vi</span>
-  <span class="td-phai"><button type="button" class="nut-mucluc" id="nutMucLuc" aria-expanded="false">☰ Mục lục</button><button type="button" class="nut-laso-cb" id="nutLasoCB">Lá số</button><button type="button" class="nut-tiep" id="nutTiep" title="Sang trang Tử vi cơ bản" aria-label="Sang trang Tử vi cơ bản"><span>Tử vi cơ bản</span><i></i></button></span>
+  <span class="td-phai"><button type="button" class="nut-mucluc" id="nutMucLuc" aria-expanded="false" aria-label="Mục lục">☰<span> Mục lục</span></button><button type="button" class="nut-laso-cb" id="nutLasoCB">Lá số</button><button type="button" class="nut-tiep" id="nutTiep" title="Sang trang Tử vi cơ bản" aria-label="Sang trang Tử vi cơ bản"><span>Tử vi cơ bản</span><i></i></button></span>
 </div>
 <header class="top">
   <h1>Lá số Tử Vi – bấm vào một cung để xem luận giải</h1>
