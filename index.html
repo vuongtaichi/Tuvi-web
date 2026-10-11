@@ -584,6 +584,9 @@ body:not(.trang-coban) .cb-giua-nut, .luan-wrap.laso-mo .cb-giua-nut { display: 
 .thanh-dau { transition: transform .2s ease; }
 body.an-dau .thanh-dau { transform: translateY(-100%); box-shadow: none; }
 body.an-dau .cb-nav { top: 8px; }
+/* nút tròn chuyển chương dời xuống phần dưới màn hình (người dùng 12/10/2026), nằm ngay trên chỗ hàng nút cuối chương khi cuộn hết trang –
+   hai cặp nút không đè nhau (đo: hàng nút cuối chương cách đáy 74–145px tùy máy) */
+.cb-giua-nut { top: auto; bottom: calc(var(--cao-chan) + 80px); transform: none; }
 
 /* Riêng bản artifact. Một giao diện sáng (người dùng chọn nền trắng) – đặt màu rõ ràng cho mọi chế độ của trình xem. */
 :root { color-scheme: light; --ok: #2e7d32; --loi: #a3271a; }
