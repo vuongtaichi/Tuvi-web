@@ -575,6 +575,11 @@ body:not(.trang-coban) .cb-giua-nut, .luan-wrap.laso-mo .cb-giua-nut { display: 
 @media (max-width: 520px) { .nut-mucluc span { display: none; } .thanh-dau .td-phai { gap: 6px; } }
 .anh-nam { display: flex; gap: 8px; align-items: stretch; } .anh-nam button { flex: 1; }
 .anh-o-nam { width: 96px; font: inherit; padding: 6px 8px; border: 1px solid #a3271a; border-radius: 8px; }
+/* đề mục trong Tử vi cơ bản (người dùng 12/10/2026: trên điện thoại đề mục như "Độ sáng 14 chính tinh ở 12 cung" chỉ 13px, nhỏ hơn chữ nội dung) –
+   đề mục luôn lớn hơn chữ nội dung một chút, ở mọi chương */
+.cb-noi h3 { font-size: 1.12em !important; line-height: 1.3; }
+.cb-noi h4 { font-size: 1.04em !important; }
+.cb-noi h3 .nhat, .cb-noi h4 .nhat { font-size: .85em; }
 
 /* Riêng bản artifact. Một giao diện sáng (người dùng chọn nền trắng) – đặt màu rõ ràng cho mọi chế độ của trình xem. */
 :root { color-scheme: light; --ok: #2e7d32; --loi: #a3271a; }
